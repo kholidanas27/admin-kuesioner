@@ -1,0 +1,23 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+.header{
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    font-family: poppins;
+    font-size: 14px;
+}
+.topnav{
+    font-family: poppins;
+    font-size: 14px;
+}
+.user{
+    font-family: poppins;
+    font-size: 14px;
+}
+.bell{
+    font-family: poppins;
+    font-size: 14px;
+}
+.drop{
+    font-family: poppins;
+    font-size: 14px;
+}

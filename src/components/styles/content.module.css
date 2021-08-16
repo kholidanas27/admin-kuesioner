@@ -1,0 +1,17 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+.breadcumb{
+    margin: 0px;
+    padding: 50px 250px 0px ;
+    font-family: poppins;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content{
+    margin: 0px;
+    padding: 20px 250px 0px ;
+    font-family: poppins;
+    font-size: 12px;
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  background-color:#f9f9f9;
+  padding: 10px;
+}
+.sidebar1{
+    padding-bottom: 10rem;
+}
+.sidebar2{
+    font-size: 10pt;
+}
+.sidebar3{
+    padding-bottom: 10rem;
+}
+.sidebar4{
+    font-size: 10pt;
+}
+.sidebar5{
+    font-size: 10pt;
+}
+.btnupload{
+    padding-top: 30px;
+}
+
+
