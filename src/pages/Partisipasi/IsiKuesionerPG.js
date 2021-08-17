@@ -1,22 +1,13 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { Component } from 'react'
 import NavbarBuatKuesioner from "../../components/NavbarBuatKuesioner";
-import SidebarBuatKuesioner from "./SidebarBuatKuesioner";
-import Style from "../../components/styles/buatkuesioner.module.css";
+import Style from "../../components/styles/isikuesionerpg.module.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import IconChecklist from "./../../assets/icon-checklist.svg";
 
-class BuatKuesioner extends Component{
-    // const [inputFile, setInputFile] = useState<HTMLInputElement | null>(null);
-    // useEffect(() => {
-    //     setInputFile(document.getElementById("input-file") as HTMLInputElement);
-    // }, []);
-
-    // const handleUpload = () => {
-    //     inputFile?.click();
-    // };
-    render () {
+class IsiKuesionerPG extends Component {
+    render() {
         return (
-            <div>
+             <div>
                 <NavbarBuatKuesioner/>
                 <div className={Style.grid}>
                     <div className={Style.sidebar1}>
@@ -99,60 +90,53 @@ class BuatKuesioner extends Component{
                     <Row>
                     <Col>
                     <div className="breadcumb" style={{fontSize: "14pt", fontWeight: "bold", paddingBottom: "10px"}}>
-                        Buat Kuesioner
+                        Pengisian Jawaban Kuesioner
                     </div>
                     <Form>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Waktu Buat</Form.Label>
-                            <Form.Control type="date" placeholder="" size="sm" disabled />
-                        </Form.Group>
                         <Form.Group controlId="exampleForm.ControlSelect1">
-                            <Form.Label>ID Kuesioner</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" disabled />
+                            <Form.Label>ID</Form.Label>
+                            <Form.Control type="text" placeholder="K-124321344" size="sm" as="select" id="inlineFormCustomSelectPref" custom>
+                            <option value="1">K-124321344</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            </Form.Control>
+                        </Form.Group>
+                        <Form.Group controlId="exampleForm.ControlInput1">
+                            <Form.Label className="font-semibold">Nama Kuesioner</Form.Label>
+                            <Form.Control type="text" placeholder="Kuesioner Sarpras" size="sm" disabled />
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlSelect2">
-                            <Form.Label>Kuesioner Sarpras</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm"/>
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlSelect2">
-                            <Form.Label>Keterangan Kuesioner</Form.Label>
-                            <Form.Control as="textarea" placeholder="Kuesioner untuk mengetahui kualitas prasana sekolah" size="sm">
+                            <Form.Label className="font-semibold">Keterangan Kuesioner</Form.Label>
+                            <Form.Control as="textarea" placeholder="Kuesioner untuk mengetahui kualitas prasana sekolah" size="sm" disabled>
                             </Form.Control>
                         </Form.Group>
                     </Form>
                     </Col>
                     <Col style={{paddingTop:"38px"}}>
                         <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Bentuk</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" as="select" id="inlineFormCustomSelectPref" custom disabled> 
-                            <option value="0">Pilih Bentuk Kuesioner</option>
-                            <option value="1">One</option>
+                            <Form.Label className="font-semibold">Sifat</Form.Label>
+                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" as="select" id="inlineFormCustomSelectPref" custom disabled>                             
+                            <option value="1">Terbuka</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                             </Form.Control>
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Sifat</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" as="select" id="inlineFormCustomSelectPref" custom disabled> 
-                            <option value="0">Pilih Sifat Kuesioner</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <Form.Label className="font-semibold">Bentuk</Form.Label>
+                            <Form.Control type="text" placeholder="Pilihan Ganda" size="sm"  disabled> 
                             </Form.Control>
                         </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Nilai Scoin</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm"/>
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Poin</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm"/>
-                        </Form.Group>
+                        <div className="pt-1">
+                        <Form.Label className="font-semibold">Panduan</Form.Label>
+                            <div>
+                                <button class="bg-blue-hole text-white font-regular py-2 px-4 rounded inline-flex items-center">
+                                    <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                                <span>Download Panduan</span>
+                                </button>
+                            </div>
+                        </div>
                     </Col>
-                    <Col style={{paddingTop:"63px"}}>
-                        <button size="sm" className="bg-blue-hole px-3 py-1 text-sm text-white rounded-sm" >
-                        + Buat Panduan
-                        </button> 
+                    <Col style={{paddingTop:"63px"}}> 
                     </Col>
                     </Row>
                     </div>
@@ -242,77 +226,44 @@ class BuatKuesioner extends Component{
                     </div>
                     </div>  
                     <div className={Style.sidebar4}>
-                    <div className="breadcumb" style={{fontSize: "14pt", fontWeight: "bold", paddingBottom: "10px"}}>
-                        Buat Panduan Kuesioner
-                    </div>
-                    <Row>
-                        <Col>
-                        <Form className={Style.form}>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Waktu Buat</Form.Label>
-                            <Form.Control type="date" placeholder="" size="sm" disabled />
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlSelect1">
-                            <Form.Label>ID Kuesioner</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" disabled />
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlSelect2">
-                            <Form.Label>Kuesioner Sarpras</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm"/>
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlSelect2">
-                            <Form.Label>Keterangan Kuesioner</Form.Label>
-                            <Form.Control as="textarea" placeholder="Kuesioner untuk mengetahui kualitas prasana sekolah" size="sm">
-                            </Form.Control>
-                        </Form.Group>
-                    </Form>
-                        </Col>
-                        <Col style={{paddingTop:"0px"}}>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Bentuk</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" as="select" id="inlineFormCustomSelectPref" custom disabled> 
-                            <option value="0">Pilih Bentuk Kuesioner</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            </Form.Control>
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Sifat</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm" as="select" id="inlineFormCustomSelectPref" custom disabled> 
-                            <option value="0">Pilih Sifat Kuesioner</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            </Form.Control>
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Nilai Scoin</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm"/>
-                        </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            <Form.Label>Poin</Form.Label>
-                            <Form.Control type="text" placeholder="e.g. nicho" size="sm"/>
-                        </Form.Group>
-                    </Col>
-                        <Col>
-                        <Form.Group controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Isian</Form.Label>
-                            <Form.Control as="textarea" rows={3} style={{fontSize:"10pt", height: '100px'}} placeholder="Ketik Isian disini" />
-                        </Form.Group>
-                        <div className={Style.btnupload}>
-                            <input id="input-file" className="d-none" type="file" />
-                            <div className="pt-8">
-                            <button size="sm" className="text-blue-hole border-2 border-blue-hole px-3 py-1 text-sm rounded-sm">
-                            Upload File
-                            </button>
-                            <button  size="sm" className="bg-blue-hole mx-12 px-3 py-1 text-sm text-white rounded-sm">
-                            + Buat Panduan
-                            </button>
-                            </div> 
+                        <div class="flex flex-wrap overflow-hidden">
+                            <div class="w-full overflow-hidden">
+                                <div class="flex flex-wrap overflow-hidden">
+                                    <div class="w-full overflow-hidden">
+                                        <table class="table-auto border-2 border-blue-hole">
+                                            <thead className="border-2 rounded-t-2 border-blue-hole">
+                                                <tr className="border-2 border-blue-hole">
+                                                <th className="border-2 border-blue-hole py-2 px-1">No</th>
+                                                <th className="border-2 border-blue-hole py-2 px-3">Soal</th>
+                                                <th className="border-2 border-blue-hole py-2 px-5">Jawaban</th>
+                                                <th className="border-2 border-blue-hole py-2 px-2">Pilihan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="border-2 border-blue-hole">
+                                                <tr className="border-2 border-blue-hole">
+                                                <td className="border-2 border-blue-hole">1</td>
+                                                <td className="border-2 border-blue-hole">Intro to CSS</td>
+                                                <td className="border-2 border-blue-hole">Adam</td>
+                                                <td className="border-2 border-blue-hole">858</td>
+                                                </tr>
+                                                <tr className="border-2 border-blue-hole">
+                                                <td className="border-2 border-blue-hole">2</td>
+                                                <td className="border-2 border-blue-hole">A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact on Design</td>
+                                                <td className="border-2 border-blue-hole">Adam</td>
+                                                <td className="border-2 border-blue-hole">112</td>
+                                                </tr>
+                                                <tr className="border-2 border-blue-hole">
+                                                <td className="border-2 border-blue-hole">3</td>
+                                                <td className="border-2 border-blue-hole">Intro to JavaScript</td>
+                                                <td className="border-2 border-blue-hole">Chris</td>
+                                                <td className="border-2 border-blue-hole">1,280</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        </Col>
-                    </Row>
                     </div>
                 </div>
             </div>
@@ -320,4 +271,4 @@ class BuatKuesioner extends Component{
     }
 }
 
-export default BuatKuesioner;
+export default IsiKuesionerPG;

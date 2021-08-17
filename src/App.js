@@ -7,7 +7,7 @@ import HomeContainer from "./containers/HomeContainer";
 import CreateUserContainer from "./containers/CreateUserContainer";
 import EditUserContainer from "./containers/EditUserContainer";
 import DetailUserContainer from "./containers/DetailUserContainer";
-import BerandaBursa from "./pages/BursaKuesioner/BerandaBursa";
+import BerandaBursa from './pages/BursaKuesioner/BerandaBursa';
 import DaftarKuis from "./pages/DaftarKuis/DaftarKuis";
 import HasilKuis from "./pages/HasilKuis/HasilKuis";
 import Partisipasi from "./pages/Partisipasi/Partisipasi";
@@ -17,6 +17,10 @@ import AdminKuesioner from "./pages/Kuesioner/AdminKuesioner";
 import BuatInstrumentPG from "./pages/Kuesioner/BuatInstrumentPG";
 import BuatInstrumentLinkert from "./pages/Kuesioner/BuatInstrumentLinkert";
 import BuatInstrumentFile from "./pages/Kuesioner/BuatInstrumentFile";
+import Undang from "./pages/Undang/Undang";
+import IsiKuesionerPG from "./pages/Partisipasi/IsiKuesionerPG";
+import IsiKuesionerLikert from "./pages/Partisipasi/IsiKuesionerLikert";
+import IsiKuesionerFile from "./pages/Partisipasi/IsiKuesionerFile";
 
 var instrument = [
   {id: 1, name: 'Gob', value: '2'},
@@ -56,6 +60,15 @@ export default class App extends Component {
           <Route path="/buat-instrumentLinkert" exact component={BuatInstrumentLinkert} />
 
           <Route path="/buat-instrumentFile" exact component={BuatInstrumentFile} />
+
+          <Route path="/undang" exact component={Undang} />
+
+          <Route path="/isikuesionerPG" exact component={IsiKuesionerPG} />
+
+          <Route path="/isikuesionerLikert" exact component={IsiKuesionerLikert} />
+
+          <Route path="/isikuesionerFile" exact component={IsiKuesionerFile} />
+          
         </BrowserRouter>
       </div>
     );
