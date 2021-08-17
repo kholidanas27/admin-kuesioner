@@ -21,6 +21,9 @@ import Undang from "./pages/Undang/Undang";
 import IsiKuesionerPG from "./pages/Partisipasi/IsiKuesionerPG";
 import IsiKuesionerLikert from "./pages/Partisipasi/IsiKuesionerLikert";
 import IsiKuesionerFile from "./pages/Partisipasi/IsiKuesionerFile";
+import DataRespondenPG from "./pages/Responden/DataRespondenPG";
+import DataRespondenLikert from "./pages/Responden/DataRespondenLikert";
+import DataRespondenFile from "./pages/Responden/DataRepondenFile";
 
 var instrument = [
   {id: 1, name: 'Gob', value: '2'},
@@ -69,6 +72,12 @@ export default class App extends Component {
 
           <Route path="/isikuesionerFile" exact component={IsiKuesionerFile} />
           
+          <Route path="/datarespondenPG" exact component={DataRespondenPG} />
+
+          <Route path="/datarespondenLikert" exact component={DataRespondenLikert} />
+
+          <Route path="/datarespondenFile" exact component={DataRespondenFile} />
+
         </BrowserRouter>
       </div>
     );
